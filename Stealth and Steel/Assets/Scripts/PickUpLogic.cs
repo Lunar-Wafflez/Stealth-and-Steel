@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class PickUpLogic : MonoBehaviour
 {
     [SerializeField]
     private LayerMask _layerMask;
@@ -29,7 +29,7 @@ public class PickUp : MonoBehaviour
         
         if(((1 << other.gameObject.layer) & _layerMask ) != 0)
         { 
-            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+            PlayerMechanics playerMovement = other.GetComponent<PlayerMechanics>();
             if (playerMovement != null)
             {
                 switch(_pickupType)

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AIMovement : MonoBehaviour
+public class EnemyControlLogic : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private NavMeshAgent _aiNavMesh;
@@ -13,7 +13,10 @@ public class AIMovement : MonoBehaviour
     [SerializeField]
     private Transform _target;
     [SerializeField]
-    private PlayerMovement _player;
+    private PlayerMechanics _player;
+    [SerializeField]
+    private float _pauseDuration = 2f; 
+    private bool _isPaused = false;
 
 
     public bool Alarmed = false;
@@ -45,7 +48,7 @@ public class AIMovement : MonoBehaviour
         {
             _aiNavMesh.speed = 2;
 
-            if (!_isMoving)
+            if (!_isMoving )
             {
                 _aiNavMesh.destination = _positions[_nextIndex];
                 _isMoving = true;
