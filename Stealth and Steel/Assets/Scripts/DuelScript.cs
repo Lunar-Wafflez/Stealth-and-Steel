@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Threading;
+using TMPro;
 
 
 public class DuelScript : MonoBehaviour
@@ -22,12 +23,14 @@ public class DuelScript : MonoBehaviour
     [SerializeField]
     private float _duelMaxWaitTime = 3f;
     [SerializeField]
-    private float _duelTimingWindow = 1f;
+    private float _duelTimingWindow = 0.5f;
+    [SerializeField]
+    private TMP_Text _duelText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ResetVars();
+        ResetSystem();
     }
 
     // Update is called once per frame
@@ -76,8 +79,9 @@ public class DuelScript : MonoBehaviour
         StartCoroutine(DuelTimer());
     }
 
-    private void ResetVars()
+    private void ResetSystem()
     {
+        _duelText.enabled = false;
         _duel = false;
         _duelTiming = 1f;
         _win = false;
@@ -109,22 +113,27 @@ public class DuelScript : MonoBehaviour
         Vector3 CamPosition = _player.transform.position;
         _duel = false;
 
+        Destroy(_enemy);
+
         StartCoroutine(CamLerp(_camPos, CamPosition, _playerScript._cameraRoot.transform.rotation, _camInitialRot, 0.5f));
 
         _playerScript._isInDuel = false;
-        ResetVars();
+        ResetSystem();
     }
 
     // Timers
 
     IEnumerator DuelTimer()
     {
+        _duelText.enabled = true;
         Debug.Log("ready...");
+        _duelText.text = "Ready...";
         for (float x = 0f; x <= _duelTiming + _duelTimingWindow; x += Time.deltaTime)
         {
             if (x >= _duelTiming)
             {
                 Debug.Log("strike!");
+                _duelText.text = "Strike!";
                 _strike = true;
             }
 
