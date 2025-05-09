@@ -8,7 +8,7 @@ public class DuelScript : MonoBehaviour
 {
     public GameObject _player;
     public GameObject _enemy;
-    public playerscript _playerScript;                //<----------------- add reference to the player movement script here and include a isInDuel bool in said script
+    public PlayerMovementScript _playerScript;                //<----------------- add reference to the player movement script here and include a isInDuel bool in said script
     public EnemyScript _enemyScript;
 
     private Vector3 _camPos;
@@ -17,6 +17,7 @@ public class DuelScript : MonoBehaviour
     private bool _duel = false;
     private bool _strike = false;
     private bool _win = false;
+    private bool _fumble = false;
     private float _duelTiming = 1f;
     [SerializeField]
     private float _duelMinWaitTime = 1.5f;
@@ -38,7 +39,12 @@ public class DuelScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) & _strike)
         {
+            if (_fumble) return;
             _win = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) & !_fumble)
+        {
+            _fumble = true;
         }
     }
 
@@ -57,7 +63,7 @@ public class DuelScript : MonoBehaviour
         {
             _duel = true;
             _enemyScript._isInDuel = true;
-            _playerScript = _player.GetComponent<playerscript>();
+            _playerScript = _player.GetComponent<PlayerMovementScript>();
             _playerScript._isInDuel = true;
             Debug.Log("The duel has begun between " + _player + " and " + _enemy);
 
@@ -85,6 +91,7 @@ public class DuelScript : MonoBehaviour
         _duel = false;
         _duelTiming = 1f;
         _win = false;
+        _fumble = false;
     }
 
     private void DuelPosition()
@@ -92,7 +99,7 @@ public class DuelScript : MonoBehaviour
         _camPos = _playerScript._cameraRoot.transform.position;
         _player.transform.position = (_enemy.transform.position + (_enemy.transform.forward * 5f));
         Quaternion temprot = _playerScript._cameraRoot.transform.rotation;
-        _player.transform.rotation = _enemy.transform.rotation * Quaternion.AngleAxis(180, Vector3.up);
+        _playerScript._mesh.transform.rotation = _enemy.transform.rotation * Quaternion.AngleAxis(180, Vector3.up);
         _playerScript._cameraRoot.transform.rotation = temprot;
         _playerScript._cameraRoot.transform.position = _camPos;
     }
