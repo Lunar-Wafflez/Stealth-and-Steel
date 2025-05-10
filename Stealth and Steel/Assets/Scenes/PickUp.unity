@@ -825,7 +825,8 @@ MonoBehaviour:
   SmokeBombs: 1
   Kunais: 5
   IsHidden: 0
-  _velocity: 5
+  _normalVelocity: 5
+  _smokeBombVelocity: 8
   _kunaiDistance: 15
   _enemyLayerMask:
     serializedVersion: 2
@@ -835,6 +836,7 @@ MonoBehaviour:
   hidden: {fileID: 2100000, guid: 1647be18f20533143bd4c7c88a192cf8, type: 2}
   _offTarget: {fileID: 2100000, guid: be3e055306bf38648a4477f65faf62d4, type: 2}
   _onTarget: {fileID: 2100000, guid: 837d04e1dfb891e4aaa78e21080398a5, type: 2}
+  _sneakAttackRadius: 5
 --- !u!143 &1791882469
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1350,6 +1352,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 410087041}
+  - {fileID: 742739985}
   - {fileID: 832575519}
   - {fileID: 1791882467}
   - {fileID: 1618047801}
@@ -1358,5 +1361,4 @@ SceneRoots:
   - {fileID: 692628347}
   - {fileID: 1967596278}
   - {fileID: 1989951438}
-  - {fileID: 742739985}
   - {fileID: 821314659}
