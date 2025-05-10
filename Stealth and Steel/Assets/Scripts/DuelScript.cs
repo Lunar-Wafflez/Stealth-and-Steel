@@ -9,7 +9,9 @@ public class DuelScript : MonoBehaviour
     public GameObject _player;
     public GameObject _enemy;
     public PlayerMovementScript _playerScript;                //<----------------- add reference to the player movement script here and include a isInDuel bool in said script
-    public EnemyScript _enemyScript;
+    public EnemyDetectionScript _enemyScript;
+    public EnemyControlLogic _enemyControlLogic;
+    public GameObject _level1;
 
     private Vector3 _camPos;
     private Quaternion _camInitialRot;
@@ -27,6 +29,7 @@ public class DuelScript : MonoBehaviour
     private float _duelTimingWindow = 0.5f;
     [SerializeField]
     private TMP_Text _duelText;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,11 +52,12 @@ public class DuelScript : MonoBehaviour
     }
 
     // Duel Methods/Functions
-    public void BeginDuel(GameObject player, GameObject enemy, EnemyScript enemyScript)
+    public void BeginDuel(GameObject player, GameObject enemy, EnemyDetectionScript enemyScript, EnemyControlLogic enemyControl)
     {
         _player = player;
         _enemy = enemy;
         _enemyScript = enemyScript;
+        _enemyControlLogic = enemyControl;
 
         if (_player == null | _enemy == null)
         {
@@ -62,7 +66,9 @@ public class DuelScript : MonoBehaviour
         else
         {
             _duel = true;
+            _level1.SetActive(false);
             _enemyScript._isInDuel = true;
+            _enemyControlLogic.IsInDuel = true;
             _playerScript = _player.GetComponent<PlayerMovementScript>();
             _playerScript._isInDuel = true;
             Debug.Log("The duel has begun between " + _player + " and " + _enemy);
@@ -112,14 +118,14 @@ public class DuelScript : MonoBehaviour
         Vector3 CamPosition = Vector3.Lerp(PlayerPos, EnemyPos, 0.5f);
         _camInitialRot = _playerScript._cameraRoot.transform.rotation;
 
-        StartCoroutine(CamLerp(_camPos, CamPosition, _camInitialRot, Quaternion.identity, 0.5f));
+        StartCoroutine(CamLerp(_camPos, CamPosition, _camInitialRot, Quaternion.Euler(0, Mathf.Atan2(_enemy.transform.right.x, _enemy.transform.right.z) * Mathf.Rad2Deg,0), 0.5f));
     }
 
     private void EndDuel()
     {
         Vector3 CamPosition = _player.transform.position;
         _duel = false;
-
+        _level1.SetActive(true);
         Destroy(_enemy);
 
         StartCoroutine(CamLerp(_camPos, CamPosition, _playerScript._cameraRoot.transform.rotation, _camInitialRot, 0.5f));

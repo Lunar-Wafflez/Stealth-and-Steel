@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class EnemyDetectionScript : MonoBehaviour
 {
     private GameObject _player;
     private DuelScript _duelScript;
 
     public bool _isInDuel = false;
-
+    public EnemyControlLogic _enemyControlLogic;
 
     void Start()
     {
@@ -20,6 +20,7 @@ public class EnemyScript : MonoBehaviour
         {
             Debug.Log(_duelScript);
         }
+        _enemyControlLogic = GetComponent<EnemyControlLogic>();
     }
 
     void Update()
@@ -37,7 +38,7 @@ public class EnemyScript : MonoBehaviour
             {
                 if (!_isInDuel & hit.distance < 10f)
                 {
-                    _duelScript.BeginDuel(_player, this.gameObject, this);
+                    _duelScript.BeginDuel(_player, this.gameObject, this, _enemyControlLogic);
                     _isInDuel = true;
                     Debug.Log("detected " + hit.collider);
                 }

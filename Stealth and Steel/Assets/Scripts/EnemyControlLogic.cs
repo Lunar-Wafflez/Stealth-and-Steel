@@ -12,14 +12,15 @@ public class EnemyControlLogic : MonoBehaviour
     private Vector3[] _positions;
     [SerializeField]
     private Transform _target;
-    //[SerializeField]
-    //private PlayerMechanics _player;
     [SerializeField]
-    private float _pauseDuration = 2f; 
+    private PlayerMovementScript _playerMovementScript;
+    [SerializeField]
+    private float _pauseDuration = 2f;
     private bool _isPaused = false;
 
 
     public bool Alarmed = false;
+    public bool IsInDuel = false;
     void Start()
     {
         _aiNavMesh = GetComponent<NavMeshAgent>();
@@ -31,38 +32,44 @@ public class EnemyControlLogic : MonoBehaviour
             new Vector3(20, 0, 20),
             new Vector3(1, 0, 20)
         };
-        
-        
-
+              
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Alarmed /*&& !_player.IsHidden*/)
+        if (!IsInDuel)
         {
-            _aiNavMesh.SetDestination(_target.position);
-            _aiNavMesh.speed = 5;
+            _aiNavMesh.isStopped = false;
+            if (Alarmed && !_playerMovementScript.IsHidden)
+            {
+                _aiNavMesh.SetDestination(_target.position);
+                _aiNavMesh.speed = 5;
+            }
+            else
+            {
+                _aiNavMesh.speed = 2;
+
+                if (!_isMoving)
+                {
+                    _aiNavMesh.destination = _positions[_nextIndex];
+                    _isMoving = true;
+                }
+                if (_isMoving && !_aiNavMesh.pathPending && _aiNavMesh.remainingDistance <= 1f)
+                {
+                    _isMoving = false;
+                    _nextIndex++;
+                    _nextIndex = _nextIndex % _positions.Length;
+                    Debug.Log(_nextIndex);
+                }
+            }
         }
         else
         {
-            _aiNavMesh.speed = 2;
-
-            if (!_isMoving )
-            {
-                _aiNavMesh.destination = _positions[_nextIndex];
-                _isMoving = true;
-            }
-            if (_isMoving && !_aiNavMesh.pathPending && _aiNavMesh.remainingDistance <= 1f)
-            {
-                _isMoving = false;
-                _nextIndex++;
-                _nextIndex = _nextIndex % _positions.Length;
-                Debug.Log(_nextIndex);
-            }
+            _aiNavMesh.isStopped = true;
         }
 
-        
-       
+
+
     }
 }

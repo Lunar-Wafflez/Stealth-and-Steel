@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6863581609259653793}
+  - component: {fileID: 7998325372892978923}
+  - component: {fileID: 315423034970925786}
   - component: {fileID: 3349174789050590808}
   - component: {fileID: 407728382670720651}
   - component: {fileID: 4479544441272702804}
   - component: {fileID: 5232508010390396737}
-  - component: {fileID: 1277637085821282685}
   - component: {fileID: 2942404544421972379}
   m_Layer: 6
   m_Name: Enemy
@@ -38,6 +39,36 @@ Transform:
   - {fileID: 5180397900571175303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7998325372892978923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628418788237175524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13bd50ef5598e242939e591ff3014b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isInDuel: 0
+--- !u!114 &315423034970925786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628418788237175524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73947a5bd2cbbba4fbccfbf8210880b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positions: []
+  _target: {fileID: 0}
+  _playerMovementScript: {fileID: 0}
+  _pauseDuration: 2
+  Alarmed: 0
 --- !u!33 &3349174789050590808
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -141,23 +172,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1277637085821282685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2628418788237175524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73947a5bd2cbbba4fbccfbf8210880b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positions: []
-  _target: {fileID: 0}
-  _player: {fileID: 0}
-  _pauseDuration: 2
-  Alarmed: 0
 --- !u!195 &2942404544421972379
 NavMeshAgent:
   m_ObjectHideFlags: 0
