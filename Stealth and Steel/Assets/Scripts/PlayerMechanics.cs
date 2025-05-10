@@ -57,13 +57,13 @@ public class PlayerMechanics : MonoBehaviour
         // Kunai Throw
         Plane groundPlane = new Plane(Vector3.up, 0f);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+        
         if (groundPlane.Raycast(ray, out float enter))
         {
             Vector3 mousePosOnPlane = ray.GetPoint(enter);
             Vector3 rayDirection = (mousePosOnPlane - transform.position).normalized;
             _ray = new Ray(transform.position, rayDirection);
-
+            Debug.DrawRay(transform.position, rayDirection);
             if (Input.GetKey(KeyCode.F) && Kunais > 0f)
             {
                 _lineRenderer.enabled = true;
@@ -83,7 +83,13 @@ public class PlayerMechanics : MonoBehaviour
                         _lineRenderer.material = _offTarget; // Turn red if not on target
                     }
                 }
-                
+                else
+                {
+                    _lineRenderer.SetPosition(0, transform.position);
+                    _lineRenderer.SetPosition(1, mousePosOnPlane);
+                    _lineRenderer.material = _offTarget; // Turn red if not on target
+                }
+
 
             }
             if (Input.GetKeyUp(KeyCode.F) && _kunaiActive)
@@ -133,7 +139,11 @@ public class PlayerMechanics : MonoBehaviour
                     Debug.Log("Sneak Attack Failed");
                 }
             }
-            
+            else
+            {
+                Debug.Log("No enemy in range");
+            }
+
         }
 
         // SmokeBomb Logic
