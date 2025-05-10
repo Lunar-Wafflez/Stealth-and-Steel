@@ -7,6 +7,7 @@ public class EnemyDetectionScript : MonoBehaviour
 
     public bool _isInDuel = false;
     public EnemyControlLogic _enemyControlLogic;
+    public PlayerMovementScript PlayerMovementScript;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class EnemyDetectionScript : MonoBehaviour
         {
             Physics.Raycast(transform.position, _player.transform.position - transform.position, out RaycastHit hit, 10);
 
-            if (hit.collider == _player.GetComponent<CapsuleCollider>())
+            if (hit.collider == _player.GetComponent<CapsuleCollider>() && !PlayerMovementScript.IsHidden)
             {
                 if (!_isInDuel & hit.distance < 10f)
                 {

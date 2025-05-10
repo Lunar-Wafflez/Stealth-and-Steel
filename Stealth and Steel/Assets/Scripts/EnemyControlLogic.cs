@@ -38,6 +38,10 @@ public class EnemyControlLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_playerMovementScript.IsHidden)
+        {
+            Alarmed = false;
+        }
         if (!IsInDuel)
         {
             _aiNavMesh.isStopped = false;
