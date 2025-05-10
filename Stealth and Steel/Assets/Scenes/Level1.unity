@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: _duelScript
       value: 
       objectReference: {fileID: 1857833540}
+    - target: {fileID: 730886933232340536, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
+      propertyPath: _kunaiPrefab
+      value: 
+      objectReference: {fileID: 4696310614397713685, guid: cfe6761a1ebf3284a94d041acc0668f6, type: 3}
+    - target: {fileID: 730886933232340536, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
+      propertyPath: _groundLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1094499774852038940, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.66
@@ -428,6 +436,10 @@ PrefabInstance:
     - target: {fileID: 6131697036546783117, guid: 7a3029b06c457b74fb40d1d6346f7f8a, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797050432660172087, guid: 7a3029b06c457b74fb40d1d6346f7f8a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7226346765985787166, guid: 7a3029b06c457b74fb40d1d6346f7f8a, type: 3}
       propertyPath: m_LocalScale.x

@@ -38,6 +38,9 @@ public class PlayerMovementScript : MonoBehaviour
     private LayerMask _enemyLayerMask;
 
     [SerializeField]
+    private LayerMask _groundLayerMask;
+
+    [SerializeField]
     private float _smokeBombDuration = 5f;
 
     [SerializeField]
@@ -45,6 +48,9 @@ public class PlayerMovementScript : MonoBehaviour
 
     [SerializeField]
     private float _sneakAttackRadius;
+
+    [SerializeField]
+    private GameObject _kunaiPrefab;
 
     private Renderer _renderer;
 
@@ -82,6 +88,7 @@ public class PlayerMovementScript : MonoBehaviour
     {
         UpdateInput();
         UpdateMovement();
+        Aim();
         // SmokeBomb Logic
         if (Input.GetKeyDown(KeyCode.Space) && SmokeBombs > 0f && !_isInDuel)
         {
@@ -278,6 +285,35 @@ public class PlayerMovementScript : MonoBehaviour
 
 
     }
+    private (bool succes, Vector3 position) GetMousePosition()
+    {
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, _groundLayerMask))
+        {
+            return (true, hit.point);
+        }
+        else
+        {
+            return (false, Vector3.zero);
+        }
+    }
+    private void Aim()
+    { 
+        var (succes, position) = GetMousePosition();    
+        if(succes)
+        {
+            Vector3 direction = position - transform.position;
+            direction.y = 0;
+           if(Input.GetKeyDown(KeyCode.F) && Kunais > 0)
+           {
+                Kunais = Mathf.Max(0, Kunais - 1);
+                Instantiate(_kunaiPrefab, transform.position, Quaternion.identity);
+                
+           }
+
+        }
+    }
+
 }
 
 
