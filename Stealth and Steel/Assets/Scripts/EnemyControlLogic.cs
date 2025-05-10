@@ -17,6 +17,8 @@ public class EnemyControlLogic : MonoBehaviour
     [SerializeField]
     private float _pauseDuration = 2f;
     private bool _isPaused = false;
+    [SerializeField]
+    private DuelScript _duelScript;
 
 
     public bool Alarmed = false;

@@ -670,6 +670,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7998325372892978923, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
+      propertyPath: _detectionDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998325372892978923, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
       propertyPath: PlayerMovementScript
       value: 
       objectReference: {fileID: 1784517832}
