@@ -12,6 +12,8 @@ public class DuelScript : MonoBehaviour
     public EnemyDetectionScript _enemyScript;
     public EnemyControlLogic _enemyControlLogic;
     public GameObject _level1;
+    [SerializeField]
+    private float _alarmDistance = 10f;
 
     private Vector3 _camPos;
     private Quaternion _camInitialRot;
@@ -121,17 +123,39 @@ public class DuelScript : MonoBehaviour
         StartCoroutine(CamLerp(_camPos, CamPosition, _camInitialRot, Quaternion.Euler(0, Mathf.Atan2(_enemy.transform.right.x, _enemy.transform.right.z) * Mathf.Rad2Deg,0), 0.5f));
     }
 
-    private void EndDuel()
+    private void EndDuel(bool isDuelWon)
     {
         Vector3 CamPosition = _player.transform.position;
         _duel = false;
         _level1.SetActive(true);
-        Destroy(_enemy);
+
+        if (!isDuelWon)
+        {
+            _enemyScript._isInDuel = false;
+            _enemyControlLogic.IsInDuel = false;
+        }
+        else Destroy(_enemy);
 
         StartCoroutine(CamLerp(_camPos, CamPosition, _playerScript._cameraRoot.transform.rotation, _camInitialRot, 0.5f));
 
         _playerScript._isInDuel = false;
         ResetSystem();
+    }
+
+    private void AlertNearbyEnemies()
+    {
+        Collider[] targets = Physics.OverlapSphere(transform.position, _alarmDistance);
+
+        if (targets.Length > 0)
+        {
+            foreach (Collider target in targets)
+            {
+                if (target.GetComponent<EnemyControlLogic>() != null)
+                {
+                    target.GetComponent<EnemyControlLogic>().Alarmed = true;
+                }
+            }
+        }
     }
 
     // Timers
@@ -156,7 +180,7 @@ public class DuelScript : MonoBehaviour
         if (_win)
         {
             Debug.Log("Player won the duel");
-            EndDuel();
+            EndDuel(true);
         }
         else
         {
@@ -164,6 +188,8 @@ public class DuelScript : MonoBehaviour
             _playerScript._health -= 1;
             Debug.Log("Player lost the duel");
 
+            AlertNearbyEnemies();
+            EndDuel(false);
             // add alarm trigger logic here
         }
         StopCoroutine("DuelTimer");
