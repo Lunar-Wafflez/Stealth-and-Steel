@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-4750758329092454773
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 1_{-4750758329092454773}
+  m_AudioClip: {fileID: 8300000, guid: 55d658ba09de9bc40a4cae3e66f6c19f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2686859782954579223
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 11_{-2686859782954579223}
+  m_AudioClip: {fileID: 8300000, guid: eb467a36f094fda4f894afd0d225869d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2380169281957059392
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 5_{-2380169281957059392}
+  m_AudioClip: {fileID: 8300000, guid: b9795265b6480c0488fd7f6a110ec8d4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2179597949795043389
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 2_{-2179597949795043389}
+  m_AudioClip: {fileID: 8300000, guid: 6707935380e1a30429484cb442fd86c1, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1848485805308814937
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 8_{-1848485805308814937}
+  m_AudioClip: {fileID: 8300000, guid: b4f5e6698e916894cb5a3c0f32719fae, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1720380005299104025
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 9_{-1720380005299104025}
+  m_AudioClip: {fileID: 8300000, guid: a0adc147952e92348a93d9325d6f19d2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1708059845384885828
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 6_{-1708059845384885828}
+  m_AudioClip: {fileID: 8300000, guid: ac022381f276dd54a89f02058adfdf3d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-32230313550351677
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 3_{-32230313550351677}
+  m_AudioClip: {fileID: 8300000, guid: 53e7cd3b7f7113f40a3303d225375c9d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &660981944811012080
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 7_{660981944811012080}
+  m_AudioClip: {fileID: 8300000, guid: 6458f349cc2cecf459b2f0e0351f259e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1646119111449666807
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 4_{1646119111449666807}
+  m_AudioClip: {fileID: 8300000, guid: 17de6ebef5ef48940b9faca8fb086eb8, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2214909640216067022
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 10_{2214909640216067022}
+  m_AudioClip: {fileID: 8300000, guid: 6749ea1a8d8ba7c43b1203c6ca2bd4be, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3426744017867033903
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285_{3426744017867033903}
+  m_AudioClip: {fileID: 8300000, guid: 51d85e61d6341a147b5a5a44c879bb98, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 3426744017867033903}
+  - {fileID: -4750758329092454773}
+  - {fileID: -2179597949795043389}
+  - {fileID: -32230313550351677}
+  - {fileID: 1646119111449666807}
+  - {fileID: -2380169281957059392}
+  - {fileID: -1708059845384885828}
+  - {fileID: 660981944811012080}
+  - {fileID: -1848485805308814937}
+  - {fileID: -1720380005299104025}
+  - {fileID: 2214909640216067022}
+  - {fileID: -2686859782954579223}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
