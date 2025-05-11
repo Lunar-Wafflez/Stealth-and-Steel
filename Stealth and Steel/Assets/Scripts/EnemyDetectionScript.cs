@@ -50,7 +50,7 @@ public class EnemyDetectionScript : MonoBehaviour
                     _duelScript.BeginDuel(_player, this.gameObject, this, _enemyControlLogic);
                     _isInDuel = true;
                     _duelCooldown = true;
-                    StartCoroutine(DuelCooldown(3f));
+                    StartCoroutine(DuelCooldown(7f));
                     Debug.Log("detected " + hit.collider);
                 }
             }
@@ -63,7 +63,11 @@ public class EnemyDetectionScript : MonoBehaviour
     {
         for (float x = 0f; x <= duration; x += Time.deltaTime)
         {
-            if (x >= duration * 0.95) _duelCooldown = false;
+            if (x >= duration * 0.95)
+            {
+                _duelCooldown = false;
+            }
+            Debug.Log(x);
             yield return new WaitForFixedUpdate();
         }
     }

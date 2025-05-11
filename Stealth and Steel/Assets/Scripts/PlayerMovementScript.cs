@@ -94,7 +94,7 @@ public class PlayerMovementScript : MonoBehaviour
         UpdateInput();
         UpdateMovement();
         Aim();
-        Debug.Log(IsHidden);
+        //Debug.Log(IsHidden);
 
         if (_health <= 0)
         {
