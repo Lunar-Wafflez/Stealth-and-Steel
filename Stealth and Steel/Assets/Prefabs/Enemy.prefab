@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3349174789050590808}
   - component: {fileID: 407728382670720651}
   - component: {fileID: 4479544441272702804}
-  - component: {fileID: 5232508010390396737}
   - component: {fileID: 2942404544421972379}
   m_Layer: 6
   m_Name: Enemy
@@ -52,6 +51,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isInDuel: 0
+  _enemyControlLogic: {fileID: 0}
+  PlayerMovementScript: {fileID: 0}
+  _detectionDistance: 1
 --- !u!114 &315423034970925786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +70,9 @@ MonoBehaviour:
   _target: {fileID: 0}
   _playerMovementScript: {fileID: 0}
   _pauseDuration: 2
+  _duelScript: {fileID: 0}
   Alarmed: 0
+  IsInDuel: 0
 --- !u!33 &3349174789050590808
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -145,33 +149,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5232508010390396737
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2628418788237175524}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!195 &2942404544421972379
 NavMeshAgent:
   m_ObjectHideFlags: 0

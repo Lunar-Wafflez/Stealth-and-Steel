@@ -33,6 +33,8 @@ public class PlayerMovementScript : MonoBehaviour
 
     [SerializeField]
     private float _kunaiDistance = 15;
+    [SerializeField]
+    private float _kunaiForce = 15f;
 
     [SerializeField]
     private LayerMask _enemyLayerMask;
@@ -304,12 +306,18 @@ public class PlayerMovementScript : MonoBehaviour
         {
             Vector3 direction = position - transform.position;
             direction.y = 0;
-           if(Input.GetKeyDown(KeyCode.F) && Kunais > 0)
+            direction.Normalize();
+            Debug.DrawRay(transform.position, direction * _kunaiDistance, Color.green);
+            if (Input.GetKeyDown(KeyCode.F) && Kunais > 0)
            {
                 Kunais = Mathf.Max(0, Kunais - 1);
-                Instantiate(_kunaiPrefab, transform.position, Quaternion.identity);
-                
-           }
+                Quaternion rotation = Quaternion.LookRotation(direction);
+                GameObject kunai = Instantiate(_kunaiPrefab, transform.position, rotation);
+
+                Rigidbody kunaiRb = kunai.GetComponent<Rigidbody>();
+                kunaiRb.AddForce(direction * _kunaiForce, ForceMode.Impulse);
+
+            }
 
         }
     }

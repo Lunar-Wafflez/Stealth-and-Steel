@@ -48,6 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5b9417eef186040b44d9c7b345b2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!33 &8568759270494267445
 MeshFilter:
   m_ObjectHideFlags: 0
