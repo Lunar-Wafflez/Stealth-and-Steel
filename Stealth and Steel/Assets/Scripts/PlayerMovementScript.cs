@@ -7,8 +7,7 @@ public class PlayerMovementScript : MonoBehaviour
     private Camera _camera;
     public GameObject _cameraRoot;
     public float _cameraSensitivity = 0.7f;
-    [SerializeField]
-    private Vector3 _cameraRotation = new Vector3();
+    public Quaternion _cameraRotation;
 
     [SerializeField]
     private float _speed = 10f;
@@ -72,6 +71,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _cameraRotation = _cameraRoot.transform.rotation;
         _characterController = GetComponent<CharacterController>();
         _body = GetComponent<CapsuleCollider>();
         if (_body != null)

@@ -118,7 +118,7 @@ public class DuelScript : MonoBehaviour
         Vector3 EnemyPos = _enemy.transform.position;
 
         Vector3 CamPosition = Vector3.Lerp(PlayerPos, EnemyPos, 0.5f);
-        _camInitialRot = _playerScript._cameraRoot.transform.rotation;
+        _camInitialRot = _playerScript._cameraRotation;
 
         StartCoroutine(CamLerp(_camPos, CamPosition, _camInitialRot, Quaternion.Euler(0, Mathf.Atan2(_enemy.transform.right.x, _enemy.transform.right.z) * Mathf.Rad2Deg,0), 0.5f));
     }
