@@ -73,6 +73,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        IsHidden = false;
         _cameraRotation = _cameraRoot.transform.rotation;
         _characterController = GetComponent<CharacterController>();
         _body = GetComponent<CapsuleCollider>();
@@ -93,7 +94,8 @@ public class PlayerMovementScript : MonoBehaviour
         UpdateInput();
         UpdateMovement();
         Aim();
-     
+        Debug.Log(IsHidden);
+
         if (_health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

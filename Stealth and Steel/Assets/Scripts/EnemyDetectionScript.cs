@@ -61,9 +61,9 @@ public class EnemyDetectionScript : MonoBehaviour
 
     IEnumerator DuelCooldown(float duration)
     {
-        for (float x = 0f; x >= duration; duration += Time.deltaTime)
+        for (float x = 0f; x <= duration; x += Time.deltaTime)
         {
-            if (duration >= duration * 0.95) _duelCooldown = false;
+            if (x >= duration * 0.95) _duelCooldown = false;
             yield return new WaitForFixedUpdate();
         }
     }
