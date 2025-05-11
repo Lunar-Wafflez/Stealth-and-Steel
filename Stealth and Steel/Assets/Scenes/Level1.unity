@@ -257,7 +257,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74216565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84575037341830344b1b018a757cf0d4, type: 3}
   m_Name: 
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74216565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73947a5bd2cbbba4fbccfbf8210880b5, type: 3}
   m_Name: 
@@ -691,6 +691,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7998325372892978923, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
+      propertyPath: PlayerMovementScript
+      value: 
+      objectReference: {fileID: 1784517832}
     m_RemovedComponents:
     - {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
     m_RemovedGameObjects: []
@@ -1637,7 +1641,7 @@ MonoBehaviour:
   _enemyScript: {fileID: 1499595702}
   _enemyControlLogic: {fileID: 1499595703}
   _level1: {fileID: 1736772368}
-  _alarmDistance: 20
+  _alarmDistance: 30
   _duelMinWaitTime: 1.5
   _duelMaxWaitTime: 3
   _duelTimingWindow: 0.5

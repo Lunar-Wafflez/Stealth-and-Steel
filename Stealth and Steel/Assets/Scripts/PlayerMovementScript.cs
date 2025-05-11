@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementScript : MonoBehaviour
 {
@@ -91,6 +93,12 @@ public class PlayerMovementScript : MonoBehaviour
         UpdateInput();
         UpdateMovement();
         Aim();
+     
+        if (_health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         // SmokeBomb Logic
         if (Input.GetKeyDown(KeyCode.Space) && SmokeBombs > 0f && !_isInDuel)
         {

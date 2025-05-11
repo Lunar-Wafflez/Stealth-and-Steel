@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Threading;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class DuelScript : MonoBehaviour
@@ -179,8 +180,15 @@ public class DuelScript : MonoBehaviour
 
         if (_win)
         {
+            if (_enemy.gameObject.name == "Boss")
+            {
+                Application.Quit();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
             Debug.Log("Player won the duel");
             EndDuel(true);
+
         }
         else
         {
