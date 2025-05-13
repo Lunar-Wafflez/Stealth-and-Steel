@@ -10,7 +10,7 @@ public class EnemyDetectionScript : MonoBehaviour
     private bool _duelCooldown = false;
     public EnemyControlLogic _enemyControlLogic;
     public PlayerMovementScript PlayerMovementScript;
-    public float _detectionDistance = 10f;
+    private float _detectionDistance = 10f;
 
     void Start()
     {
@@ -40,7 +40,7 @@ public class EnemyDetectionScript : MonoBehaviour
 
             if (hit.collider == _player.GetComponent<CapsuleCollider>() && !PlayerMovementScript.IsHidden)
             {
-                if (hit.distance > 5f & hit.distance < _detectionDistance)
+                if (hit.distance < _detectionDistance)
                 {
                     _enemyControlLogic.Alarmed = true;
                 }
@@ -67,7 +67,7 @@ public class EnemyDetectionScript : MonoBehaviour
             {
                 _duelCooldown = false;
             }
-            Debug.Log(x);
+
             yield return new WaitForFixedUpdate();
         }
     }
