@@ -182,8 +182,8 @@ public class DuelScript : MonoBehaviour
         {
             if (_enemy.gameObject.name == "Boss")
             {
-                Application.Quit();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("EndScreenWin");
+                Debug.Log("Player won the duel and defeated the boss");
             }
 
             Debug.Log("Player won the duel");
@@ -193,7 +193,7 @@ public class DuelScript : MonoBehaviour
         else
         {
             _strike = false;
-            _playerScript._health -= 1;
+            _playerScript.Health -= 1;
             Debug.Log("Player lost the duel");
 
             AlertNearbyEnemies();

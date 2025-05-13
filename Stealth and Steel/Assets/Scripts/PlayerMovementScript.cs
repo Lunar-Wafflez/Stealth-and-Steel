@@ -13,7 +13,7 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField]
     private float _speed = 10f;
     private float _speedMultiplier = 1f;
-    public int _health = 3;
+    public int Health = 3;
 
     private CapsuleCollider _body;
     public GameObject _mesh;
@@ -58,7 +58,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     private float _smokeBombTimer = 0f;
 
-    private bool _smokeBombActive = false, _kunaiActive = false;
+    private bool _smokeBombActive = false;
 
     private LineRenderer _lineRenderer;
 
@@ -95,9 +95,10 @@ public class PlayerMovementScript : MonoBehaviour
         Aim();
         //Debug.Log(IsHidden);
 
-        if (_health <= 0)
+        if (Health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("EndScreenLoss");
+            Debug.Log("Player is dead");
         }
 
         // SmokeBomb Logic
@@ -158,61 +159,6 @@ public class PlayerMovementScript : MonoBehaviour
             }
 
         }
-        // Kunai Throw
-        //Plane groundPlane = new Plane(Vector3.up, 0f);
-        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        //if (groundPlane.Raycast(ray, out float enter))
-        //{
-        //    Vector3 mousePosOnPlane = ray.GetPoint(enter);
-        //    Vector3 rayDirection = (mousePosOnPlane - transform.position).normalized;
-        //    _ray = new Ray(transform.position, rayDirection);
-        //    Debug.DrawRay(transform.position, rayDirection);
-        //    if (Input.GetKey(KeyCode.F) && Kunais > 0f && !_isInDuel)
-        //    {
-        //        _lineRenderer.enabled = true;
-        //        _kunaiActive = true;
-
-        //        if (Physics.Raycast(_ray, out RaycastHit hit, _kunaiDistance))
-        //        {
-        //            _lineRenderer.SetPosition(0, transform.position);
-        //            _lineRenderer.SetPosition(1, mousePosOnPlane);
-
-        //            if (((1 << hit.collider.gameObject.layer) & _enemyLayerMask) != 0)
-        //            {
-        //                _lineRenderer.material = _onTarget; // Turn green if on target
-        //            }
-        //            else
-        //            {
-        //                _lineRenderer.material = _offTarget; // Turn red if not on target
-        //            }
-        //        }
-        //        else
-        //        {
-        //            _lineRenderer.SetPosition(0, transform.position);
-        //            _lineRenderer.SetPosition(1, mousePosOnPlane);
-        //            _lineRenderer.material = _offTarget; // Turn red if not on target
-        //        }
-
-
-        //    }
-        //    if (Input.GetKeyUp(KeyCode.F) && _kunaiActive)
-        //    {
-        //        Kunais = Mathf.Max(0, Kunais - 1);
-        //        if (Physics.Raycast(_ray, out RaycastHit hit, _kunaiDistance))
-        //        {
-        //            if (((1 << hit.collider.gameObject.layer) & _enemyLayerMask) != 0)
-        //            {
-        //                Destroy(hit.collider.gameObject);
-
-        //            }
-        //        }
-        //        _lineRenderer.enabled = false;
-        //        _kunaiActive = false;
-
-        //    }
-        //}
-
     }
 
     // Movement functions
