@@ -106,7 +106,7 @@ public class PlayerMovementScript : MonoBehaviour
                 _smokeBombActive = false;
             }
         }
-        if (_health <= 0)
+        if (Health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); //need to add game end logic here
         }
