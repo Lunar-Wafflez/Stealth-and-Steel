@@ -27,13 +27,13 @@ public class EnemyControlLogic : MonoBehaviour
     {
         _aiNavMesh = GetComponent<NavMeshAgent>();
 
-        _positions = new Vector3[]
-        {
-            new Vector3(1, 0, 1),
-            new Vector3(20, 0, 1),
-            new Vector3(20, 0, 20),
-            new Vector3(1, 0, 20)
-        };
+       // _positions = new Vector3[]
+       // {
+         //   new Vector3(1, 0, 1),
+           // new Vector3(20, 0, 1),
+           // new Vector3(20, 0, 20),
+            //new Vector3(1, 0, 20)
+        //};
               
     }
 
