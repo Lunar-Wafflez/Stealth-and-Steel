@@ -13,7 +13,7 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField]
     private float _speed = 7f;
     private float _speedMultiplier = 1f;
-    public int _health = 3;
+    public int Health = 3;
 
     private CapsuleCollider _body;
     public GameObject _mesh;
@@ -58,7 +58,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     private float _smokeBombTimer = 0f;
 
-    private bool _smokeBombActive = false, _kunaiActive = false;
+    private bool _smokeBombActive = false;
 
     private LineRenderer _lineRenderer;
 
