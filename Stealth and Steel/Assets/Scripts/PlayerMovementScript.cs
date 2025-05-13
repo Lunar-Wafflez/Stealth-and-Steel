@@ -194,13 +194,17 @@ public class PlayerMovementScript : MonoBehaviour
     {
         if (crouched)
         {
+            _speedMultiplier = 0.5f;
             _characterController.height = 1;
             _characterController.transform.localPosition -= Vector3.up * 0.5f; //for some reason this does absolutely nothing
+            _mesh.transform.localPosition -= Vector3.up * 0.5f;
         }
         else
         {
+            _speedMultiplier = 1f;
             _characterController.height = 2;
             _characterController.transform.localPosition += Vector3.up * 0.5f; //this too, even if set to this.transform instead of _characterController.transform, and even if changed to position instead of localPosition
+            _mesh.transform.localPosition += Vector3.up * 0.5f;
         }
     }
 
