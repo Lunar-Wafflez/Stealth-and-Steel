@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 2261080669138268984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -22.48}
+  m_LocalPosition: {x: 0, y: -0, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -356,7 +356,7 @@ MonoBehaviour:
   _camera: {fileID: 3794899983743529011}
   _cameraRoot: {fileID: 483023521849396849}
   _cameraSensitivity: 0.7
-  _cameraRotation: {x: 30, y: 0, z: 0}
+  _cameraRotation: {x: 30, y: 0, z: 0, w: 0}
   _speed: 10
   _health: 3
   _mesh: {fileID: 1125975405475388109}
@@ -366,15 +366,20 @@ MonoBehaviour:
   Kunais: 0
   IsHidden: 0
   _kunaiDistance: 15
+  _kunaiForce: 15
   _enemyLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  _groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   _smokeBombDuration: 5
   _normal: {fileID: 2100000, guid: 950503e0993fa574b80694cdd356ca70, type: 2}
   _hidden: {fileID: 2100000, guid: 89d8bd9b6c9ca52498bdd00629ac4a9b, type: 2}
   _offTarget: {fileID: 2100000, guid: 02b2b4c7b8d3d9548b261d8cd704e42e, type: 2}
   _onTarget: {fileID: 2100000, guid: bc83b4321cf86d949ac7062bbf725cdc, type: 2}
-  _sneakAttackRadius: 5
+  _sneakAttackRadius: 1
+  _kunaiPrefab: {fileID: 4696310614397713685, guid: cfe6761a1ebf3284a94d041acc0668f6, type: 3}
 --- !u!120 &2923746749023456318
 LineRenderer:
   serializedVersion: 2

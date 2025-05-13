@@ -81,11 +81,6 @@ public class DuelScript : MonoBehaviour
         }
     }
 
-    private void DuelTypeSelector()
-    {
-        DuelType1();
-    }
-
     private void DuelType1()
     {
         _duelTiming = Random.Range(_duelMinWaitTime, _duelMaxWaitTime);
@@ -219,7 +214,7 @@ public class DuelScript : MonoBehaviour
         }
         if (_duel)
         {
-            DuelTypeSelector();
+            DuelType1();
         }
         StopCoroutine("CamLerp");
     }

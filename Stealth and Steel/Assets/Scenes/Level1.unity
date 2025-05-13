@@ -131,18 +131,6 @@ PrefabInstance:
       propertyPath: _duelScript
       value: 
       objectReference: {fileID: 1857833540}
-    - target: {fileID: 730886933232340536, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
-      propertyPath: _kunaiPrefab
-      value: 
-      objectReference: {fileID: 4696310614397713685, guid: cfe6761a1ebf3284a94d041acc0668f6, type: 3}
-    - target: {fileID: 730886933232340536, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
-      propertyPath: _sneakAttackRadius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 730886933232340536, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
-      propertyPath: _groundLayerMask.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     - target: {fileID: 1094499774852038940, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.66
