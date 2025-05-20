@@ -15,6 +15,12 @@ public class UiManagerBeginScreen : MonoBehaviour
     private GameObject _mainMenu;
     [SerializeField]
     private GameObject _controlsMenu;
+    [SerializeField]
+    private GameObject _levelsMenu;
+    [SerializeField]
+    private Button _level1Button;
+    [SerializeField]
+    private Button _level2Button;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,12 +30,13 @@ public class UiManagerBeginScreen : MonoBehaviour
         _backButton.onClick.AddListener(OnBackButtonClicked);
         _exitButton.onClick.AddListener(OnExitButtonClicked);
         _startButton.onClick.AddListener(OnStartButtonClicked);
+        _level1Button.onClick.AddListener(OnLevel1ButtonClicked);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnControlsButtonClicked()
     {
@@ -47,6 +54,15 @@ public class UiManagerBeginScreen : MonoBehaviour
     }
     private void OnStartButtonClicked()
     {
+        _levelsMenu.SetActive(true);
+        _mainMenu.SetActive(false);
+    }
+    private void OnLevel1ButtonClicked()
+    {
         SceneManager.LoadScene("Level1");
+    }
+    private void OnLevel2ButtonClicked()
+    {
+        SceneManager.LoadScene("Level2");
     }
 }
