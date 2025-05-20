@@ -87,6 +87,7 @@ public class PlayerMovementScript : MonoBehaviour
         UpdateInput();
         UpdateMovement();
         Aim();
+        Debug.Log(IsHidden);
 
         if (_smokeBombActive)
         {

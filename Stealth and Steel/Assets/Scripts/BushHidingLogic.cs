@@ -9,28 +9,28 @@ public class BushHidingLogic : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //_playerMovementScript.IsHidden = false;
+        _playerMovementScript.IsHidden = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(_playerMovementScript.IsHidden);
+        Debug.Log(_playerMovementScript.IsHidden);
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (1 << (other.gameObject.layer & _layerMask) != 0)
-    //    {
-    //        // Hide the player
-    //        _playerMovementScript.IsHidden = true;
-    //    }
-    //}
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (1 << (other.gameObject.layer & _layerMask) != 0)
-    //    {
-    //        // Show the player
-    //        _playerMovementScript.IsHidden = false;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (1 << (other.gameObject.layer & _layerMask) != 0)
+        {
+            // Hide the player
+            _playerMovementScript.IsHidden = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (1 << (other.gameObject.layer & _layerMask) != 0)
+        {
+            // Show the player
+            _playerMovementScript.IsHidden = false;
+        }
+    }
 }

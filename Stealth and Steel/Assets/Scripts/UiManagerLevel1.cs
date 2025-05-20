@@ -35,15 +35,15 @@ public class UiManagerLevel1 : MonoBehaviour
         }
         else if (_playerMovementScript.Health == 2)
         {
-            Heart1.gameObject.SetActive(false);
+            Heart1.gameObject.SetActive(true);
             Heart2.gameObject.SetActive(true);
-            Heart3.gameObject.SetActive(true);
+            Heart3.gameObject.SetActive(false);
         }
         else if (_playerMovementScript.Health == 1)
         {
-            Heart1.gameObject.SetActive(false);
+            Heart1.gameObject.SetActive(true);
             Heart2.gameObject.SetActive(false);
-            Heart3.gameObject.SetActive(true);
+            Heart3.gameObject.SetActive(false);
         }
     }
 }
