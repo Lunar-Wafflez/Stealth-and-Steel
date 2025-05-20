@@ -108,7 +108,7 @@ public class PlayerMovementScript : MonoBehaviour
         }
         if (Health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); //need to add game end logic here
+            SceneManager.LoadScene("EndScreenLoss");
         }
     }
 
