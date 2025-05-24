@@ -22,7 +22,7 @@ public class UiManagerLoseScreen : MonoBehaviour
     private void OnRetryButtonClicked()
     {
         // Reload the current scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("StartScreen");
     }
     private void OnExitButtonClicked()
     {

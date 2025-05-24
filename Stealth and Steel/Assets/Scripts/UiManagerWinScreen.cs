@@ -12,6 +12,8 @@ public class UiManagerWinScreen : MonoBehaviour
     [SerializeField] 
     private Button _level2Button;
     [SerializeField]
+    private Button _level3Button;
+    [SerializeField]
     private GameObject _menu;
     [SerializeField]
     private GameObject _menuLevels;
@@ -22,6 +24,7 @@ public class UiManagerWinScreen : MonoBehaviour
         _exitButton.onClick.AddListener(OnExitButtonClicked);
         _level1Button.onClick.AddListener(OnLevel1ButtonClicked);
         _level2Button.onClick.AddListener(OnLevel2ButtonClicked);
+        _level3Button.onClick.AddListener(OnLevel3ButtonClicked);
 
     }
 
@@ -47,5 +50,9 @@ public class UiManagerWinScreen : MonoBehaviour
     private void OnLevel2ButtonClicked()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
+    }
+    private void OnLevel3ButtonClicked()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
     }
 }
