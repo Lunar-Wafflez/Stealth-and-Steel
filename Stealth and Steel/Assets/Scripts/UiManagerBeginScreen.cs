@@ -21,6 +21,8 @@ public class UiManagerBeginScreen : MonoBehaviour
     private Button _level1Button;
     [SerializeField]
     private Button _level2Button;
+    [SerializeField]
+    private Button _level3Button;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,6 +33,8 @@ public class UiManagerBeginScreen : MonoBehaviour
         _exitButton.onClick.AddListener(OnExitButtonClicked);
         _startButton.onClick.AddListener(OnStartButtonClicked);
         _level1Button.onClick.AddListener(OnLevel1ButtonClicked);
+        _level2Button.onClick.AddListener(OnLevel2ButtonClicked);
+        _level3Button.onClick.AddListener(OnLevel3ButtonClicked);
     }
 
     // Update is called once per frame
@@ -64,5 +68,9 @@ public class UiManagerBeginScreen : MonoBehaviour
     private void OnLevel2ButtonClicked()
     {
         SceneManager.LoadScene("Level2");
+    }
+    private void OnLevel3ButtonClicked()
+    {
+        SceneManager.LoadScene("Level3");
     }
 }
