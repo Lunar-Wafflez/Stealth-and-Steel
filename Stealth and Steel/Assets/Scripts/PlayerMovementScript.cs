@@ -30,6 +30,7 @@ public class PlayerMovementScript : MonoBehaviour
     public int SmokeBombs = 0;
     public int Kunais = 0;
     public bool IsHidden = false;
+    public bool IsCrouched = false;
 
     [SerializeField]
     private float _kunaiDistance = 15;
@@ -46,7 +47,7 @@ public class PlayerMovementScript : MonoBehaviour
     private float _smokeBombDuration = 5f;
 
     [SerializeField]
-    private Material _normal, _hidden, _offTarget, _onTarget;
+    private Material _normal, _hidden;
 
     [SerializeField]
     private float _sneakAttackRadius;
@@ -62,7 +63,6 @@ public class PlayerMovementScript : MonoBehaviour
 
     private LineRenderer _lineRenderer;
 
-    private Ray _ray;
     //Temporary untill actual model
     private GameObject _tempChildMesh;
     private Renderer _tempChildMeshRenderer;
@@ -120,11 +120,13 @@ public class PlayerMovementScript : MonoBehaviour
         // Crouch
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            Crouch(true);
+            IsCrouched = true;
+            Crouch(IsCrouched);
         }
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
-            Crouch(false);
+            IsCrouched = false;
+            Crouch(IsCrouched);
         }
 
         // Smoke Bomb
@@ -141,7 +143,7 @@ public class PlayerMovementScript : MonoBehaviour
         }
 
         // Sneak Attack
-        if (Input.GetKeyDown(KeyCode.E) && !_isInDuel)
+        if (Input.GetKeyDown(KeyCode.E) && !_isInDuel && IsCrouched)
         {
             Debug.Log("Sneak Attack Attempted");
             GameObject enemy = DetectClosest();
