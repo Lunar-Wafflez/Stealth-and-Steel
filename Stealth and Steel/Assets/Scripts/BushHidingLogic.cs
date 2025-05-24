@@ -19,7 +19,7 @@ public class BushHidingLogic : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (1 << (other.gameObject.layer & _layerMask) != 0)
+        if (((1 << other.gameObject.layer) & _layerMask) != 0)
         {
             // Hide the player
             _playerMovementScript.IsHidden = true;
@@ -27,7 +27,7 @@ public class BushHidingLogic : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (1 << (other.gameObject.layer & _layerMask) != 0)
+        if (((1 << other.gameObject.layer) & _layerMask) != 0)
         {
             // Show the player
             _playerMovementScript.IsHidden = false;
