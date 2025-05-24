@@ -15,7 +15,7 @@ public class BushHidingLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_playerMovementScript.IsHidden);
+        //Debug.Log(_playerMovementScript.IsHidden);
     }
     private void OnTriggerEnter(Collider other)
     {

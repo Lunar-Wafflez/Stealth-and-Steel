@@ -51,7 +51,7 @@ public class EnemyDetectionScript : MonoBehaviour
                     _isInDuel = true;
                     _duelCooldown = true;
                     StartCoroutine(DuelCooldown(7f));
-                    Debug.Log("detected " + hit.collider);
+                    //Debug.Log("detected " + hit.collider);
                 }
             }
         }
@@ -67,7 +67,7 @@ public class EnemyDetectionScript : MonoBehaviour
             {
                 _duelCooldown = false;
             }
-            Debug.Log(x);
+            //Debug.Log(x);
             yield return new WaitForFixedUpdate();
         }
     }

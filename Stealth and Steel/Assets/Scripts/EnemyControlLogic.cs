@@ -62,7 +62,7 @@ public class EnemyControlLogic : MonoBehaviour
                     _isMoving = false;
                     _nextIndex++;
                     _nextIndex = _nextIndex % _positions.Length;
-                    Debug.Log(_nextIndex);
+                    //Debug.Log(_nextIndex);
                 }
             }
         }
