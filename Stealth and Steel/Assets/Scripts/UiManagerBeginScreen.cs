@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class UiManagerBeginScreen : MonoBehaviour
 {
     [SerializeField]
@@ -23,7 +24,12 @@ public class UiManagerBeginScreen : MonoBehaviour
     private Button _level2Button;
     [SerializeField]
     private Button _level3Button;
+    [SerializeField]
+    private GameObject _warning;
 
+    private float _timer = 0f;
+    private bool _showingWarning = false;
+    private float _warningDuration = 3f;    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,6 +46,15 @@ public class UiManagerBeginScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_timer > 0)
+        {
+            _timer -= Time.deltaTime;
+            if (_timer <= 0)
+            {
+                _warning.SetActive(false);
+                _showingWarning = false;
+            }
+        }
 
     }
     private void OnControlsButtonClicked()
@@ -67,7 +82,10 @@ public class UiManagerBeginScreen : MonoBehaviour
     }
     private void OnLevel2ButtonClicked()
     {
-        SceneManager.LoadScene("Level2");
+        //SceneManager.LoadScene("Level2");
+        _warning.SetActive(true);
+        _timer = _warningDuration;
+
     }
     private void OnLevel3ButtonClicked()
     {
