@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8154539167159536948
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 5_{-8154539167159536948}
+  m_AudioClip: {fileID: 8300000, guid: 6ce0f60ca2d43a34eae7c4fd3d5801fd, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7604110727109776728
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 11_{-7604110727109776728}
+  m_AudioClip: {fileID: 8300000, guid: 2411f7d231609c54189f8db11edfb112, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6447129857726525580
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 2_{-6447129857726525580}
+  m_AudioClip: {fileID: 8300000, guid: 5f55bfc893a0c38449e47fca4e081d5b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4756634797060629129
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285_{-4756634797060629129}
+  m_AudioClip: {fileID: 8300000, guid: f185395b2fbf2f94b98c3ebc6ac4a0ee, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4614060152907238066
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 9_{-4614060152907238066}
+  m_AudioClip: {fileID: 8300000, guid: 9e5703a3bd6690648b4670751a21c15e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1931606706944372733
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 3_{-1931606706944372733}
+  m_AudioClip: {fileID: 8300000, guid: 4c3f994305eafea45a51e82c3d719853, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &62606062289428224
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 7_{62606062289428224}
+  m_AudioClip: {fileID: 8300000, guid: bedcb909fbdd2a44abac79267bf24e86, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &821675272049723780
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 8_{821675272049723780}
+  m_AudioClip: {fileID: 8300000, guid: bf58080915ce7a745bb6239bfde0ff88, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1740471086411789476
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 10_{1740471086411789476}
+  m_AudioClip: {fileID: 8300000, guid: 6c8f0afd5aa09d54185bc2d07348c4e3, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2300316589201123639
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 4_{2300316589201123639}
+  m_AudioClip: {fileID: 8300000, guid: 4f5b8be48633ebb40b916480a9aa3e49, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3914455932337348339
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 6_{3914455932337348339}
+  m_AudioClip: {fileID: 8300000, guid: 8fd31913b9aa65d459960ea413432abe, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -4756634797060629129}
+  - {fileID: 6420238050627571927}
+  - {fileID: -6447129857726525580}
+  - {fileID: -1931606706944372733}
+  - {fileID: 2300316589201123639}
+  - {fileID: -8154539167159536948}
+  - {fileID: 3914455932337348339}
+  - {fileID: 62606062289428224}
+  - {fileID: 821675272049723780}
+  - {fileID: -4614060152907238066}
+  - {fileID: 1740471086411789476}
+  - {fileID: -7604110727109776728}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6420238050627571927
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps, Human, Slippers, Carpet, Wood, Jog, Run, Close SND128285 1_{6420238050627571927}
+  m_AudioClip: {fileID: 8300000, guid: dc9e88f859409f24e85f8cd9dd0f4f54, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

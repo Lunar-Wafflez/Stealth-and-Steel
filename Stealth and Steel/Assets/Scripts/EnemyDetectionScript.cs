@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class EnemyDetectionScript : MonoBehaviour
@@ -11,6 +11,10 @@ public class EnemyDetectionScript : MonoBehaviour
     public EnemyControlLogic _enemyControlLogic;
     public PlayerMovementScript PlayerMovementScript;
     public float _detectionDistance = 10f;
+
+    [SerializeField] private AudioClip alertSound;
+    private AudioSource audioSource;
+    private bool _hasPlayedAlert = false;
 
     void Start()
     {
@@ -25,6 +29,8 @@ public class EnemyDetectionScript : MonoBehaviour
             Debug.Log(_duelScript);
         }
         _enemyControlLogic = GetComponent<EnemyControlLogic>();
+        // initialise audio
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -43,6 +49,13 @@ public class EnemyDetectionScript : MonoBehaviour
                 if (hit.distance > 5f & hit.distance < _detectionDistance)
                 {
                     _enemyControlLogic.Alarmed = true;
+
+                    // alarm sound play
+                    if (!_hasPlayedAlert && alertSound != null && audioSource != null)
+                    {
+                        audioSource.PlayOneShot(alertSound);
+                        _hasPlayedAlert = true;
+                    }
                 }
 
                 if (!_isInDuel & !_duelCooldown & hit.distance < 5f)
@@ -66,6 +79,9 @@ public class EnemyDetectionScript : MonoBehaviour
             if (x >= duration * 0.95)
             {
                 _duelCooldown = false;
+
+                // flag to play sound again
+                _hasPlayedAlert = false;
             }
             Debug.Log(x);
             yield return new WaitForFixedUpdate();

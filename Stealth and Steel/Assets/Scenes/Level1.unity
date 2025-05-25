@@ -548,6 +548,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7998325372892978923, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
+      propertyPath: alertSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4688ec9f6a13c88469d37aef86e878cd, type: 3}
+    - target: {fileID: 7998325372892978923, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
       propertyPath: PlayerMovementScript
       value: 
       objectReference: {fileID: 1784517832}
@@ -2209,6 +2213,8 @@ MonoBehaviour:
   _duelMaxWaitTime: 3
   _duelTimingWindow: 0.5
   _duelText: {fileID: 1298602480}
+  readySound: {fileID: 8300000, guid: 9212c4a4494b28e4aa77c09767dc1046, type: 3}
+  strikeSound: {fileID: 8300000, guid: 15d84f667ced92542be2a44fb003ce5f, type: 3}
 --- !u!4 &1857833541
 Transform:
   m_ObjectHideFlags: 0
