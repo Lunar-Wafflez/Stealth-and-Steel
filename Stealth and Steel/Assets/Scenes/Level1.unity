@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: e7cf537382965434a9ceb8acff137a2d, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 05906bb2b43a2d345a51b9db5337592a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1395,6 +1395,28 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!64 &174902935
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174902927}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5725717631599267634, guid: bb316e30fd9994e4fb5f8533e49eb4ec, type: 3}
 --- !u!1001 &227236397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1755,6 +1777,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3209211280670415271, guid: 7a3029b06c457b74fb40d1d6346f7f8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 174902931}
+    - targetCorrespondingSourceObject: {fileID: 3209211280670415271, guid: 7a3029b06c457b74fb40d1d6346f7f8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 174902935}
     - targetCorrespondingSourceObject: {fileID: 7277379088003970181, guid: 7a3029b06c457b74fb40d1d6346f7f8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 371199908}
@@ -4168,7 +4193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &921858803
 Transform:
   m_ObjectHideFlags: 0
@@ -4385,6 +4410,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
+--- !u!1001 &943766605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 149.99995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 149.99995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360723365453323629, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_Name
+      value: Torch 1 (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
 --- !u!1 &944416826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7686302485601438803, guid: 7a3029b06c457b74fb40d1d6346f7f8a, type: 3}
@@ -5532,7 +5622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Becarefull, there are bandits walking arround the camp.
+  m_text: Be careful, there are bandits walking around the camp.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6494,7 +6584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The boss you'll have to duel to win the game.
+  m_text: To win the game you have to duel the boss.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6573,6 +6663,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353753347}
   m_CullTransparentMesh: 1
+--- !u!1001 &1382520833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 149.99995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 149.99995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360723365453323629, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_Name
+      value: Torch 1 (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
 --- !u!1 &1392852435
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,7 +7274,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tip: In tents you''ll often find items & try level 2,3'
+  m_text: 'Tips: In tents often there will be items to collect. Also try level 2
+    & 3
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7808,7 +7966,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tips: In tents often there will be items to collect & try level 2, 3
+  m_text: 'Tips: In tents often there will be items to collect. Also try level 2
+    & 3
 
 '
   m_isRightToLeft: 0
@@ -8169,6 +8328,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8a19ee536bdd43469d566378fa1f3d0, type: 3}
+--- !u!1001 &1837903316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 150.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70085627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.70085627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.09381092
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.093810916
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -74.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360723365453323629, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_Name
+      value: Torch 1 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
 --- !u!1 &1855544120
 GameObject:
   m_ObjectHideFlags: 0
@@ -8983,7 +9203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If the bandits are alarmed/ spotted you, you can use smokeboms or hide
+  m_text: If the bandits are alarmed/spotted you, you can use smoke bombs or hide
     in bushes/haystacks to lose them
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9055,6 +9275,71 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &2031047043
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 149.99995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 149.99995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013516249689033525, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360723365453323629, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
+      propertyPath: m_Name
+      value: Torch 1 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7953111d5326ee74b9107e8382ce6cbc, type: 3}
 --- !u!1 &2051890238
 GameObject:
   m_ObjectHideFlags: 0
@@ -9112,7 +9397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can sneak kill bandits by standing behind them crouched and pressing
+  m_text: You can sneak kill bandits by standing behind them while crouched and pressing
     'e'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9560,3 +9845,7 @@ SceneRoots:
   - {fileID: 1239728190}
   - {fileID: 1632716371}
   - {fileID: 1906810127}
+  - {fileID: 1837903316}
+  - {fileID: 2031047043}
+  - {fileID: 943766605}
+  - {fileID: 1382520833}
