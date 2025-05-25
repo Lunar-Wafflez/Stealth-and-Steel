@@ -46,7 +46,7 @@ public class UiManagerBeginScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_timer > 0)
+       /* if(_timer > 0)
         {
             _timer -= Time.deltaTime;
             if (_timer <= 0)
@@ -54,7 +54,7 @@ public class UiManagerBeginScreen : MonoBehaviour
                 _warning.SetActive(false);
                 _showingWarning = false;
             }
-        }
+        }*/
 
     }
     private void OnControlsButtonClicked()
@@ -82,9 +82,9 @@ public class UiManagerBeginScreen : MonoBehaviour
     }
     private void OnLevel2ButtonClicked()
     {
-        //SceneManager.LoadScene("Level2");
-        _warning.SetActive(true);
-        _timer = _warningDuration;
+        SceneManager.LoadScene("Level2");
+        /*_warning.SetActive(true);
+        _timer = _warningDuration;*/
 
     }
     private void OnLevel3ButtonClicked()
