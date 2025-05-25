@@ -16,10 +16,14 @@ public class UiManagerLevel1 : MonoBehaviour
     private Image Heart2;
     [SerializeField]
     private Image Heart3;
+    [SerializeField]
+    private Button _controls;
+    [SerializeField]
+    private GameObject _controlsMenu;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _controls.onClick.AddListener(OnControlsButtonClicked);
     }
 
     // Update is called once per frame
@@ -45,5 +49,9 @@ public class UiManagerLevel1 : MonoBehaviour
             Heart2.gameObject.SetActive(false);
             Heart3.gameObject.SetActive(false);
         }
+    }
+    private void OnControlsButtonClicked()
+    {
+        _controlsMenu.SetActive(!_controlsMenu.activeSelf);
     }
 }

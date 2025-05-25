@@ -357,14 +357,15 @@ MonoBehaviour:
   _cameraRoot: {fileID: 483023521849396849}
   _cameraSensitivity: 0.7
   _cameraRotation: {x: 30, y: 0, z: 0, w: 0}
-  _speed: 10
-  _health: 3
+  _speed: 5
+  Health: 3
   _mesh: {fileID: 1125975405475388109}
   _duelScript: {fileID: 0}
   _isInDuel: 0
   SmokeBombs: 0
   Kunais: 0
   IsHidden: 0
+  IsCrouched: 0
   _kunaiDistance: 15
   _kunaiForce: 15
   _enemyLayerMask:
@@ -376,9 +377,7 @@ MonoBehaviour:
   _smokeBombDuration: 5
   _normal: {fileID: 2100000, guid: 950503e0993fa574b80694cdd356ca70, type: 2}
   _hidden: {fileID: 2100000, guid: 89d8bd9b6c9ca52498bdd00629ac4a9b, type: 2}
-  _offTarget: {fileID: 2100000, guid: 02b2b4c7b8d3d9548b261d8cd704e42e, type: 2}
-  _onTarget: {fileID: 2100000, guid: bc83b4321cf86d949ac7062bbf725cdc, type: 2}
-  _sneakAttackRadius: 1
+  _sneakAttackRadius: 1.5
   _kunaiPrefab: {fileID: 4696310614397713685, guid: cfe6761a1ebf3284a94d041acc0668f6, type: 3}
 --- !u!120 &2923746749023456318
 LineRenderer:
