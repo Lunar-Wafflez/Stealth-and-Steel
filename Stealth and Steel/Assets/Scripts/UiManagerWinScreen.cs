@@ -45,7 +45,7 @@ public class UiManagerWinScreen : MonoBehaviour
     }
     private void OnLevel1ButtonClicked()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Tutorial");
     }
     private void OnLevel2ButtonClicked()
     {

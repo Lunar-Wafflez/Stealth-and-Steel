@@ -78,7 +78,7 @@ public class UiManagerBeginScreen : MonoBehaviour
     }
     private void OnLevel1ButtonClicked()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Tutorial");
     }
     private void OnLevel2ButtonClicked()
     {
