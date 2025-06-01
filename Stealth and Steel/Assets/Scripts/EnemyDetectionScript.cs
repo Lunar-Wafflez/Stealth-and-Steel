@@ -30,6 +30,7 @@ public class EnemyDetectionScript : MonoBehaviour
     void Update()
     {
         DetectionUpdate();
+        IsTouching();
     }
 
     private void DetectionUpdate()
@@ -69,6 +70,18 @@ public class EnemyDetectionScript : MonoBehaviour
             }
             //Debug.Log(x);
             yield return new WaitForFixedUpdate();
+        }
+    }
+    private void IsTouching()
+    {
+        Collider enemyCollider = GetComponent<Collider>();
+        Collider playerCollider = _player.GetComponent<Collider>();
+        if (enemyCollider != null && playerCollider != null)
+        {
+            if (enemyCollider.bounds.Intersects(playerCollider.bounds))
+            {
+                _enemyControlLogic.Alarmed = true;
+            }
         }
     }
 }

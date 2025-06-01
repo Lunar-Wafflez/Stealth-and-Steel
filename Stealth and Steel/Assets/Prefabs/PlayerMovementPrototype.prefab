@@ -379,6 +379,7 @@ MonoBehaviour:
   _hidden: {fileID: 2100000, guid: 89d8bd9b6c9ca52498bdd00629ac4a9b, type: 2}
   _sneakAttackRadius: 1.5
   _kunaiPrefab: {fileID: 4696310614397713685, guid: cfe6761a1ebf3284a94d041acc0668f6, type: 3}
+  SmokeBombActive: 0
 --- !u!120 &2923746749023456318
 LineRenderer:
   serializedVersion: 2
@@ -590,7 +591,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
