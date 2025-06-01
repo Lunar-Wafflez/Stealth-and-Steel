@@ -59,7 +59,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     private float _smokeBombTimer = 0f;
 
-    private bool _smokeBombActive = false;
+    public bool SmokeBombActive = false;
 
     private LineRenderer _lineRenderer;
 
@@ -89,7 +89,7 @@ public class PlayerMovementScript : MonoBehaviour
         Aim();
         //Debug.Log(IsHidden);
 
-        if (_smokeBombActive)
+        if (SmokeBombActive)
         {
             Debug.Log("Smoke Bomb Active");
             if (_smokeBombTimer < _smokeBombDuration)
@@ -104,7 +104,7 @@ public class PlayerMovementScript : MonoBehaviour
                 _tempChildMeshRenderer.material = _normal;
                 _speedMultiplier = 1.0f;
                 Debug.Log("Smoke Bomb Duration Ended");
-                _smokeBombActive = false;
+                SmokeBombActive = false;
             }
         }
         if (Health <= 0)
@@ -139,7 +139,7 @@ public class PlayerMovementScript : MonoBehaviour
             SmokeBombs = Mathf.Max(0, SmokeBombs - 1);
             _smokeBombTimer = 0f;
             IsHidden = true;
-            _smokeBombActive = true;
+            SmokeBombActive = true;
         }
 
         // Sneak Attack

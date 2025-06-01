@@ -25,7 +25,7 @@ public class BushHidingLogic : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (((1 << other.gameObject.layer) & _layerMask) != 0)
+        if (((1 << other.gameObject.layer) & _layerMask) != 0 && !_playerMovementScript.SmokeBombActive)
         {
             _playerMovementScript.IsHidden = false;
         }
