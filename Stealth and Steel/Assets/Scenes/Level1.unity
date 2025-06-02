@@ -8504,6 +8504,8 @@ MonoBehaviour:
   _duelMaxWaitTime: 3
   _duelTimingWindow: 0.5
   _duelText: {fileID: 1298602480}
+  readySound: {fileID: 8300000, guid: 9212c4a4494b28e4aa77c09767dc1046, type: 3}
+  strikeSound: {fileID: 8300000, guid: 15d84f667ced92542be2a44fb003ce5f, type: 3}
 --- !u!4 &1857833541
 Transform:
   m_ObjectHideFlags: 0

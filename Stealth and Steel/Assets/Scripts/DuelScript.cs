@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Threading;
 using TMPro;
@@ -34,6 +34,11 @@ public class DuelScript : MonoBehaviour
     private TMP_Text _duelText;
     private int duels = 0;
 
+    // Audio
+    [SerializeField] private AudioClip readySound;
+    [SerializeField] private AudioClip strikeSound;
+    private AudioSource audioSource;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,6 +46,12 @@ public class DuelScript : MonoBehaviour
         duels = 0;
         _duelText.enabled = false;
         ResetSystem();
+
+        // Initialising sound
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
     }
 
     // Update is called once per frame
@@ -185,14 +196,38 @@ public class DuelScript : MonoBehaviour
         _duelText.enabled = true;
         Debug.Log("ready...");
         _duelText.text = "Ready...";
+
+        // ▶️ Звук "Ready"
+        if (audioSource != null && readySound != null)
+            audioSource.PlayOneShot(readySound);
+
+        //for (float x = 0f; x <= _duelTiming + _duelTimingWindow; x += Time.deltaTime)
+        //{
+        //    if (x >= _duelTiming)
+        //    {
+        //        Debug.Log("strike!");
+        //        _duelText.text = "Strike!";
+        //        _strike = true;
+        //    }
+
+        //    yield return new WaitForFixedUpdate();
+        //}
+
+        bool hasShownStrike = false;
+
         for (float x = 0f; x <= _duelTiming + _duelTimingWindow; x += Time.deltaTime)
         {
-            if (x >= _duelTiming)
+            if (!hasShownStrike && x >= _duelTiming)
             {
                 _duelText.transform.localScale = Vector3.one*5.2f;
                 Debug.Log("strike!");
                 _duelText.text = "Strike!";
                 _strike = true;
+
+                if (audioSource != null && strikeSound != null)
+                    audioSource.PlayOneShot(strikeSound);
+
+                hasShownStrike = true;
             }
             else
             {
