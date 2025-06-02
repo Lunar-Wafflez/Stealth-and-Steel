@@ -19,6 +19,8 @@ public class EnemyControlLogic : MonoBehaviour
     private bool _isPaused = false;
     [SerializeField]
     private DuelScript _duelScript;
+    [SerializeField]
+    private float _runSpeed = 5.5f;
 
 
     public bool Alarmed = false;
@@ -27,13 +29,7 @@ public class EnemyControlLogic : MonoBehaviour
     {
         _aiNavMesh = GetComponent<NavMeshAgent>();
 
-        _positions = new Vector3[]
-        {
-            new Vector3(1, 0, 1),
-            new Vector3(20, 0, 1),
-            new Vector3(20, 0, 20),
-            new Vector3(1, 0, 20)
-        };
+        
               
     }
 
@@ -50,7 +46,7 @@ public class EnemyControlLogic : MonoBehaviour
             if (Alarmed && !_playerMovementScript.IsHidden)
             {
                 _aiNavMesh.SetDestination(_target.position);
-                _aiNavMesh.speed = 5;
+                _aiNavMesh.speed = _runSpeed;
             }
             else
             {
@@ -66,7 +62,7 @@ public class EnemyControlLogic : MonoBehaviour
                     _isMoving = false;
                     _nextIndex++;
                     _nextIndex = _nextIndex % _positions.Length;
-                    Debug.Log(_nextIndex);
+                    //Debug.Log(_nextIndex);
                 }
             }
         }

@@ -32,11 +32,14 @@ public class DuelScript : MonoBehaviour
     private float _duelTimingWindow = 0.5f;
     [SerializeField]
     private TMP_Text _duelText;
+    private int duels = 0;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        duels = 0;
+        _duelText.enabled = false;
         ResetSystem();
     }
 
@@ -57,10 +60,13 @@ public class DuelScript : MonoBehaviour
     // Duel Methods/Functions
     public void BeginDuel(GameObject player, GameObject enemy, EnemyDetectionScript enemyScript, EnemyControlLogic enemyControl)
     {
+        //code below is redundant due to Ln:140,Ch:9
+        //if (_enemyControlLogic != null) _enemyControlLogic.IsInDuel = false; //this should fix enemy standing still after another enemy initiates duel during their duel
+
         _player = player;
         _enemy = enemy;
         _enemyScript = enemyScript;
-        _enemyControlLogic = enemyControl;
+        _enemyControlLogic = enemyControl                                           ;
 
         if (_player == null | _enemy == null)
         {
@@ -69,9 +75,13 @@ public class DuelScript : MonoBehaviour
         else
         {
             _duel = true;
+            duels += 1;
             _level1.SetActive(false);
             _enemyScript._isInDuel = true;
             _enemyControlLogic.IsInDuel = true;
+
+            ToggleAllEnemyMovement(true);
+
             _playerScript = _player.GetComponent<PlayerMovementScript>();
             _playerScript._isInDuel = true;
             Debug.Log("The duel has begun between " + _player + " and " + _enemy);
@@ -81,26 +91,23 @@ public class DuelScript : MonoBehaviour
         }
     }
 
-    private void DuelTypeSelector()
-    {
-        DuelType1();
-    }
-
     private void DuelType1()
     {
-        _duelTiming = Random.Range(_duelMinWaitTime, _duelMaxWaitTime);
+        _duelTiming = Random.Range(_duelMinWaitTime, _duelMaxWaitTime) - (duels * 0.4f);
+        _duelTimingWindow -= 0.025f;
         Debug.Log(_duelTiming);
+        Debug.Log(_duelTimingWindow);
 
         StartCoroutine(DuelTimer());
     }
 
     private void ResetSystem()
     {
-        _duelText.enabled = false;
         _duel = false;
         _duelTiming = 1f;
         _win = false;
         _fumble = false;
+        _duelText.transform.localScale = Vector3.one*5.2f;
     }
 
     private void DuelPosition()
@@ -130,12 +137,16 @@ public class DuelScript : MonoBehaviour
         _duel = false;
         _level1.SetActive(true);
 
+        StartCoroutine(DuelEndText());
+
         if (!isDuelWon)
         {
             _enemyScript._isInDuel = false;
             _enemyControlLogic.IsInDuel = false;
         }
         else Destroy(_enemy);
+
+        ToggleAllEnemyMovement(false);
 
         StartCoroutine(CamLerp(_camPos, CamPosition, _playerScript._cameraRoot.transform.rotation, _camInitialRot, 0.5f));
 
@@ -159,6 +170,14 @@ public class DuelScript : MonoBehaviour
         }
     }
 
+    private void ToggleAllEnemyMovement(bool theBool)
+    {
+        foreach (EnemyControlLogic x in FindObjectsByType<EnemyControlLogic>(FindObjectsSortMode.None))
+        {
+            x.IsInDuel = theBool;
+        }
+    }
+
     // Timers
 
     IEnumerator DuelTimer()
@@ -170,20 +189,26 @@ public class DuelScript : MonoBehaviour
         {
             if (x >= _duelTiming)
             {
+                _duelText.transform.localScale = Vector3.one*5.2f;
                 Debug.Log("strike!");
                 _duelText.text = "Strike!";
                 _strike = true;
             }
-
+            else
+            {
+                float t = x / _duelTiming;
+                _duelText.transform.localScale = Vector3.LerpUnclamped(Vector3.one*5.2f, Vector3.one*4.2f, t);
+            }
+            
             yield return new WaitForFixedUpdate();
         }
-
+        
         if (_win)
         {
             if (_enemy.gameObject.name == "Boss")
             {
-                Application.Quit();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("EndScreenWin");
+                Debug.Log("Player won the duel and defeated the boss");
             }
 
             Debug.Log("Player won the duel");
@@ -193,7 +218,7 @@ public class DuelScript : MonoBehaviour
         else
         {
             _strike = false;
-            _playerScript._health -= 1;
+            _playerScript.Health -= 1;
             Debug.Log("Player lost the duel");
 
             AlertNearbyEnemies();
@@ -219,8 +244,32 @@ public class DuelScript : MonoBehaviour
         }
         if (_duel)
         {
-            DuelTypeSelector();
+            DuelType1();
         }
         StopCoroutine("CamLerp");
+    }
+
+    IEnumerator DuelEndText()
+    {
+        if (_win)
+        {
+            _duelText.color = Color.green;
+            _duelText.text = "Success!";
+        }
+        else
+        {
+            _duelText.color = Color.red;
+            _duelText.text = "Lost!";
+        }
+
+        for (float i = 0; i < 1f; i += Time.deltaTime)
+        {
+            _duelText.transform.localScale = Vector3.Lerp(Vector3.one * 5.2f, Vector3.one * 6f, i);
+            
+
+            yield return new WaitForFixedUpdate();
+        }
+        _duelText.enabled = false;
+        _duelText.color = Color.white;
     }
 }
