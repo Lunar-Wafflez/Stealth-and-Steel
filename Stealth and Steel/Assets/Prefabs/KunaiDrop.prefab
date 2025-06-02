@@ -60,6 +60,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _pickupType: 0
+  kunaiPickupSound: {fileID: 8300000, guid: fefe0fe2ab2b0784bb4e69947ee3cc46, type: 3}
+  smokeBombPickupSound: {fileID: 0}
 --- !u!23 &1159514785683140934
 MeshRenderer:
   m_ObjectHideFlags: 0
