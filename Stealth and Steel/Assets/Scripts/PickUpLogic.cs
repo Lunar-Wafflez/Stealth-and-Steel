@@ -13,6 +13,8 @@ public class PickUpLogic : MonoBehaviour
     private AudioClip smokeBombPickupSound;
 
     private AudioSource audioSource;
+    private bool _isPickedUp = false;
+    private MeshRenderer _meshRenderer;
     enum PickUpType
     {
         Kunai,
@@ -27,6 +29,7 @@ public class PickUpLogic : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>(); 
         }
         audioSource.playOnAwake = false;
+        _meshRenderer = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -36,12 +39,14 @@ public class PickUpLogic : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
-        if(((1 << other.gameObject.layer) & _layerMask ) != 0)
+        if (_isPickedUp) return;
+        if (((1 << other.gameObject.layer) & _layerMask ) != 0)
         { 
             PlayerMovementScript playerMovement = other.GetComponent<PlayerMovementScript>();
             if (playerMovement != null)
             {
+                _isPickedUp = true; 
+                _meshRenderer.enabled = false; 
                 Debug.Log("Player picked up: " + _pickupType);
                 switch (_pickupType)
                 {
