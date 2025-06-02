@@ -383,7 +383,7 @@ MonoBehaviour:
   _smokeBombDuration: 5
   _normal: {fileID: 2100000, guid: 950503e0993fa574b80694cdd356ca70, type: 2}
   _hidden: {fileID: 2100000, guid: 89d8bd9b6c9ca52498bdd00629ac4a9b, type: 2}
-  _sneakAttackRadius: 1
+  _sneakAttackRadius: 1.5
   _kunaiPrefab: {fileID: 4696310614397713685, guid: cfe6761a1ebf3284a94d041acc0668f6, type: 3}
   SmokeBombActive: 0
 --- !u!120 &2923746749023456318

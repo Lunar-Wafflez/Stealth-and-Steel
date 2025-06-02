@@ -15,9 +15,6 @@ public class EnemyControlLogic : MonoBehaviour
     [SerializeField]
     private PlayerMovementScript _playerMovementScript;
     [SerializeField]
-    private float _pauseDuration = 2f;
-    private bool _isPaused = false;
-    [SerializeField]
     private DuelScript _duelScript;
     [SerializeField]
     private float _runSpeed = 5.5f;

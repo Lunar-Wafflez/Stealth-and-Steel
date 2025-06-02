@@ -42,7 +42,8 @@ public class PickUpLogic : MonoBehaviour
             PlayerMovementScript playerMovement = other.GetComponent<PlayerMovementScript>();
             if (playerMovement != null)
             {
-                switch(_pickupType)
+                Debug.Log("Player picked up: " + _pickupType);
+                switch (_pickupType)
                 {
                     case PickUpType.Kunai:
                         playerMovement.Kunais += 1;

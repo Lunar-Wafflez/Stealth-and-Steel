@@ -3,6 +3,12 @@ using UnityEngine;
 public class Footsteps : MonoBehaviour
 {
     public AudioSource footsteps, sprint, smokebomb;
+    
+    private PlayerMovementScript _playerMovementScript;
+    private void Start()
+    {
+        _playerMovementScript = this.GetComponent<PlayerMovementScript>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -19,7 +25,7 @@ public class Footsteps : MonoBehaviour
             //    footsteps.enabled = true;
             //    sprint.enabled = false;
             //}
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && _playerMovementScript.SmokeBombs > 0)
             {
                 if (!smokebomb.isPlaying)
                 {
