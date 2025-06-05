@@ -109,8 +109,8 @@ public class DuelScript : MonoBehaviour
 
     private void DuelType1()
     {
-        _duelTiming = Random.Range(_duelMinWaitTime, _duelMaxWaitTime) - (duels * 0.4f);
-        _duelTimingWindow -= 0.025f;
+        _duelTiming = Mathf.Clamp(Random.Range(_duelMinWaitTime, _duelMaxWaitTime) - (duels * 0.4f), 1, 10);
+        _duelTimingWindow = Mathf.Clamp( _duelTimingWindow - 0.025f, _duelTimingWindow - 0.125f, 10);
         Debug.Log(_duelTiming);
         Debug.Log(_duelTimingWindow);
 
