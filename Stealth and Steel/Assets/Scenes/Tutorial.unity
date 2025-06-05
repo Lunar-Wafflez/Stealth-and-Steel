@@ -1704,7 +1704,6 @@ MonoBehaviour:
   - {x: -87.3, y: 2.66, z: 1.37}
   _target: {fileID: 1473484369}
   _playerMovementScript: {fileID: 1473484368}
-  _pauseDuration: 2
   _duelScript: {fileID: 1422399157}
   _runSpeed: 6
   Alarmed: 0
@@ -2006,7 +2005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'crtl + e' to sneak kill
+  m_text: Press 'CTRL + E' to sneak kill.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2764,7 +2763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'f' to shoot kunai at mouse
+  m_text: Press 'F' to throw a kunai at your mouse location.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3706,7 +3705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemies can't enter tents, also often items in tents
+  m_text: Enemies can't enter tents, there are also often items in tents.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4922,7 +4921,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Warning! The more you duel, the smaller the Strike window will become.
-    Getting attacked by multiple enemies also makes you lose the game so don't get
+    Getting attacked by multiple enemies also makes you lose the game, so don't get
     cornered.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5512,7 +5511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If detected, bushes remove detection
+  m_text: If detected, bushes remove detection.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6871,7 +6870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'space' to go undetected for a while
+  m_text: Press 'SPACE' to go invisible for a while.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7531,7 +7530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: if in duel, press 'space' when you see 'Strike'. If pressed too early,
+  m_text: If in duel, press 'SPACE' when you see 'Strike'. If pressed too early,
     you lose the duel.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
