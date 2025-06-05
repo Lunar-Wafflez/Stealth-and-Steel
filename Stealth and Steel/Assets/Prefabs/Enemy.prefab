@@ -68,11 +68,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _positions:
-  - {x: -3.09, y: 1.929189, z: 6.71}
-  - {x: 15.78, y: 1.929189, z: 6.95}
+  - {x: 24.33, y: 1.929189, z: 8.63}
+  - {x: 24.64, y: 1.929189, z: -8.52}
   _target: {fileID: 0}
   _playerMovementScript: {fileID: 0}
-  _pauseDuration: 2
   _duelScript: {fileID: 0}
   _runSpeed: 5.5
   Alarmed: 0

@@ -67,6 +67,8 @@ public class PlayerMovementScript : MonoBehaviour
     private GameObject _tempChildMesh;
     private Renderer _tempChildMeshRenderer;
 
+    public AudioClip stealthKillClip;       
+    private AudioSource stealthKillAudioSource;    
 
     void Start()
     {
@@ -79,6 +81,12 @@ public class PlayerMovementScript : MonoBehaviour
         _lineRenderer.enabled = false;
         _tempChildMesh = _mesh.transform.GetChild(0).gameObject;
         _tempChildMeshRenderer = _tempChildMesh.GetComponent<Renderer>();
+
+        // stealth kill sound initialisation
+        stealthKillAudioSource = gameObject.AddComponent<AudioSource>();
+        stealthKillAudioSource.playOnAwake = false;
+        stealthKillAudioSource.spatialBlend = 0;
+        stealthKillAudioSource.volume = 1f;
     }
 
 
@@ -157,6 +165,7 @@ public class PlayerMovementScript : MonoBehaviour
                 {
                     Debug.Log("Sneak Attack Successful");
                     Destroy(enemy);
+                    stealthKillAudioSource.PlayOneShot(stealthKillClip);
                 }
                 else
                 {
