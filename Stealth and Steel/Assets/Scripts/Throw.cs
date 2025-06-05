@@ -15,5 +15,6 @@ public class Throw : MonoBehaviour
                 throww.Play();
             }
         }
+
     }
 }
