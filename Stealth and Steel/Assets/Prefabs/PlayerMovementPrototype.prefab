@@ -386,6 +386,7 @@ MonoBehaviour:
   _sneakAttackRadius: 1.5
   _kunaiPrefab: {fileID: 4696310614397713685, guid: cfe6761a1ebf3284a94d041acc0668f6, type: 3}
   SmokeBombActive: 0
+  stealthKillClip: {fileID: 8300000, guid: 52fbb73dbd514b0478a4e12a17f35a39, type: 3}
 --- !u!120 &2923746749023456318
 LineRenderer:
   serializedVersion: 2
