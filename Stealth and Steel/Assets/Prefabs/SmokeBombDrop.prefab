@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4599952271358597507}
   m_Layer: 0
   m_Name: SmokeBombDrop
-  m_TagString: Untagged
+  m_TagString: SmokeBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,3 +153,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _pickupType: 1
+  kunaiPickupSound: {fileID: 0}
+  smokeBombPickupSound: {fileID: 8300000, guid: 29e80509e9c1c5b47a518ab085880190, type: 3}

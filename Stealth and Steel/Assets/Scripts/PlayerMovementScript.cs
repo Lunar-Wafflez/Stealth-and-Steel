@@ -130,7 +130,7 @@ public class PlayerMovementScript : MonoBehaviour
         }
 
         // Smoke Bomb
-        if (Input.GetKeyDown(KeyCode.Space) && SmokeBombs > 0f && !_isInDuel)
+        if (Input.GetKeyDown(KeyCode.Space) && SmokeBombs > 0f && !_isInDuel && !SmokeBombActive)
         {
             Debug.Log("Smoke Bomb Activated");
             _renderer.material = _hidden;

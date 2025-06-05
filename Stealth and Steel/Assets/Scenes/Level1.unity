@@ -3606,34 +3606,6 @@ PrefabInstance:
       propertyPath: _playerMovementScript
       value: 
       objectReference: {fileID: 1784517832}
-    - target: {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _positions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _positions.Array.data[0].x
-      value: -3.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _positions.Array.data[0].y
-      value: 1.929189
-      objectReference: {fileID: 0}
-    - target: {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _positions.Array.data[0].z
-      value: 6.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _positions.Array.data[1].x
-      value: 15.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _positions.Array.data[1].y
-      value: 1.929189
-      objectReference: {fileID: 0}
-    - target: {fileID: 315423034970925786, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _positions.Array.data[1].z
-      value: 6.95
-      objectReference: {fileID: 0}
     - target: {fileID: 2628418788237175524, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -3677,10 +3649,6 @@ PrefabInstance:
     - target: {fileID: 6863581609259653793, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7998325372892978923, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
-      propertyPath: _detectionDistance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7998325372892978923, guid: 7f0f8acb6bfbd974c822350caec9d2fd, type: 3}
       propertyPath: PlayerMovementScript
@@ -8504,6 +8472,8 @@ MonoBehaviour:
   _duelMaxWaitTime: 3
   _duelTimingWindow: 0.5
   _duelText: {fileID: 1298602480}
+  readySound: {fileID: 8300000, guid: 9212c4a4494b28e4aa77c09767dc1046, type: 3}
+  strikeSound: {fileID: 8300000, guid: 15d84f667ced92542be2a44fb003ce5f, type: 3}
 --- !u!4 &1857833541
 Transform:
   m_ObjectHideFlags: 0
