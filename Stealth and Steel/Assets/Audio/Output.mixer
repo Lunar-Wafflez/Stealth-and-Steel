@@ -66,6 +66,39 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-4002967752211431124
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy Footsteps
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: ec332df6f5d33df49bb40ac5d34371df
+  m_Children: []
+  m_Volume: 7f8299c66591db24c9f87e945db2a6c5
+  m_Pitch: 460ea2da3eced21489ec63918456257b
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -2352384256966711652}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-2352384256966711652
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 7b682810f23868a4aae5ab8eb3fb9ad7
+  m_EffectName: Attenuation
+  m_MixLevel: 79ec45bb41e098d468bbbe49fa1a1798
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-627859208134396672
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -107,6 +140,7 @@ AudioMixerController:
     - fee72bdae0806184394fa7f6be176ffd
     - 4fb76b9355265df47b57340ad3f66a8a
     - 7e956709499f85b4499d046dc12923b4
+    - ec332df6f5d33df49bb40ac5d34371df
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -123,6 +157,7 @@ AudioMixerGroupController:
   - {fileID: -4303430472228352569}
   - {fileID: -7553508431722552080}
   - {fileID: -627859208134396672}
+  - {fileID: -4002967752211431124}
   m_Volume: 2fbf25975084cbd488672eb8df8f8654
   m_Pitch: fe3e672f8d03d754e87a53d712710d93
   m_Send: 00000000000000000000000000000000
@@ -156,6 +191,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: cb3bd195804d0ad4eb48e9c3c8d43eea
   m_FloatValues:
+    7f8299c66591db24c9f87e945db2a6c5: 8.439028
     2458dafe186b366458fdb436c02aa0af: -6.865224
   m_TransitionOverrides: {}
 --- !u!244 &3222874294464015090
