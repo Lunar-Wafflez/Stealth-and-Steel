@@ -363,7 +363,7 @@ MonoBehaviour:
   _cameraRoot: {fileID: 483023521849396849}
   _cameraSensitivity: 0.7
   _cameraRotation: {x: 30, y: 0, z: 0, w: 0}
-  _speed: 4.5
+  _speed: 5
   Health: 3
   _mesh: {fileID: 1125975405475388109}
   _duelScript: {fileID: 0}
