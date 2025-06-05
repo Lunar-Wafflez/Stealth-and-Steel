@@ -18323,10 +18323,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 730886933232340536, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
-      propertyPath: _speed
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 730886933232340536, guid: d42ab052ca008f94f9634ad2dae10737, type: 3}
       propertyPath: _duelScript
       value: 
       objectReference: {fileID: 623304652}

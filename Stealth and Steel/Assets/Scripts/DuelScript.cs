@@ -66,6 +66,11 @@ public class DuelScript : MonoBehaviour
         {
             _fumble = true;
         }
+        if (_duel && _enemy == null)
+        { 
+            EndDuel(true); // if the enemy is destroyed, end the duel
+        }
+        Debug.Log("Amount of Duels: " + duels); 
     }
 
     // Duel Methods/Functions
@@ -254,6 +259,7 @@ public class DuelScript : MonoBehaviour
         {
             _strike = false;
             _playerScript.Health -= 1;
+            duels = 0;
             Debug.Log("Player lost the duel");
 
             AlertNearbyEnemies();

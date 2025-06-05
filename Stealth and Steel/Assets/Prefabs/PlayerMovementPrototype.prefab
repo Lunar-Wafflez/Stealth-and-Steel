@@ -363,7 +363,7 @@ MonoBehaviour:
   _cameraRoot: {fileID: 483023521849396849}
   _cameraSensitivity: 0.7
   _cameraRotation: {x: 30, y: 0, z: 0, w: 0}
-  _speed: 5
+  _speed: 4.5
   Health: 3
   _mesh: {fileID: 1125975405475388109}
   _duelScript: {fileID: 0}
@@ -909,6 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throww: {fileID: 2473871555008904507}
+  _playerMovementScript: {fileID: 730886933232340536}
 --- !u!1 &6585398932638862700
 GameObject:
   m_ObjectHideFlags: 0
